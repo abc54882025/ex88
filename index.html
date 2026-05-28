@@ -2,489 +2,369 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="🎰 Máy đánh bạc Điện Tử，Bắn Cá，Game Bài，Sòng bạc trực tuyến, nền tảng chơi Game và giải trí đáng tin cậy nhất." />
-    <title>EX88 - Hệ Sinh Thái Game Đỉnh Cao</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.min.js"></script>
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description"
+		content="Máy đánh bạc Điện Tử🎰，Bắn Cá，Game Bài，Sòng bạc trực tuyến, nền tảng chơi Game và giải trí đáng tin cậy nhất." />
+	<link rel="icon" href="images/index/logott88.png">
+	<title>TT88 Trò chơi sòng bạc trực tuyến hay nhất, thương hiệu lâu đời mà bạn có thể tin tưởng.</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+		crossorigin="anonymous">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<style>
+		@keyframes scaleEffect {
+			0% {
+				transform: scale(1.1);
+			}
 
-    <style>
-        /* === RESET & CƠ BẢN === */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Roboto', sans-serif;
-            /* Nền xanh đen viễn tưởng */
-            background-color: #020c1b;
-            background-image: 
-                radial-gradient(circle at center, #0a192f 0%, #020c1b 100%),
-                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 100% 100%, 30px 30px, 30px 30px;
-            color: #e2e8f0;
-            min-height: 100vh;
-            padding: 40px 10px;
-        }
+			50% {
+				transform: scale(1.2);
+			}
 
-        /* KHUNG VIỀN KIM LOẠI - NEON BÊN NGOÀI */
-        #app {
-            max-width: 1400px; /* Bố cục rộng hơn */
-            margin: 0 auto;
-            padding: 20px 30px 40px;
-            background: rgba(10, 25, 47, 0.8);
-            border: 2px solid #4a5568;
-            border-radius: 15px;
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.8);
-            position: relative;
-        }
-        
-        /* Hiệu ứng góc kim loại */
-        #app::before, #app::after {
-            content: ''; position: absolute; width: 40px; height: 40px;
-            border: 3px solid #00f0ff; pointer-events: none;
-        }
-        #app::before { top: -2px; left: -2px; border-right: none; border-bottom: none; border-radius: 15px 0 0 0; }
-        #app::after { bottom: -2px; right: -2px; border-left: none; border-top: none; border-radius: 0 0 15px 0; }
+			100% {
+				transform: scale(1.1);
+			}
+		}
 
-        /* === HEADER === */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0 35px 0;
-            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
-            margin-bottom: 30px;
-        }
-        .header .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 55px;
-            font-weight: 900;
-            color: #ffffff;
-            text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #0080ff;
-            letter-spacing: 4px;
-            margin: 0;
-            line-height: 1;
-        }
-        .btn-support {
-            background: linear-gradient(90deg, rgba(0,240,255,0.1), rgba(0,128,255,0.3));
-            color: #00f0ff;
-            padding: 10px 25px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: 'Orbitron', sans-serif;
-            border: 1px solid #00f0ff;
-            box-shadow: inset 0 0 10px rgba(0,240,255,0.2), 0 0 10px rgba(0,240,255,0.2);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-transform: uppercase;
-        }
-        .btn-support:hover {
-            background: rgba(0, 240, 255, 0.3);
-            box-shadow: inset 0 0 20px rgba(0,240,255,0.5), 0 0 20px rgba(0,240,255,0.5);
-            color: #fff;
-            transform: scale(1.02);
-        }
+		.img-download-app img {
+			animation: scaleEffect 2s infinite ease-in-out;
+		}
 
-        /* === BỐ CỤC CHÍNH === */
-        .main-container {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        /* Cột trang trí 2 bên */
-        .side-panel {
-            flex: 0.8;
-            min-width: 220px;
-            background: linear-gradient(180deg, rgba(16, 33, 62, 0.6), rgba(2, 12, 27, 0.8));
-            border: 1px solid #2d3748;
-            border-radius: 10px;
-            padding: 25px 15px;
-            text-align: center;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
-        }
-        .side-title {
-            font-family: 'Orbitron', sans-serif;
-            color: #00f0ff;
-            font-size: 16px;
-            margin-bottom: 30px;
-            text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
-            line-height: 1.4;
-        }
-        .side-item {
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .side-item i {
-            font-size: 35px;
-            color: #cbd5e0;
-            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
-        }
-        .side-item span { font-size: 13px; font-weight: bold; color: #a0aec0; text-transform: uppercase; }
+		.img-download-app {
+			z-index: 99999;
+		}
 
-        /* Cột nội dung trung tâm */
-        .center-panel {
-            background: linear-gradient(180deg, rgba(26, 32, 44, 0.8), rgba(10, 15, 30, 0.9));
-            border: 2px solid #4a5568;
-            border-radius: 12px;
-            padding: 35px 25px 25px;
-            position: relative;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.5);
-        }
-        .links-panel { flex: 2; min-width: 350px; }
-        .app-panel { flex: 1.2; min-width: 300px; text-align: center; }
-
-        /* Tiêu đề Panel */
-        .panel-title {
-            background: linear-gradient(90deg, transparent, rgba(0,240,255,0.2), transparent);
-            color: #00f0ff;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 5px 40px;
-            display: inline-block;
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-top: 2px solid #00f0ff;
-            border-bottom: 2px solid #00f0ff;
-            white-space: nowrap;
-            text-shadow: 0 0 5px #00f0ff;
-        }
-
-        /* === DANH SÁCH LINK === */
-        .link-list { list-style: none; margin-top: 15px; }
-        .link-item {
-            display: flex;
-            align-items: center;
-            background: rgba(15, 23, 42, 0.6);
-            margin-bottom: 12px;
-            padding: 10px 15px;
-            border-radius: 6px;
-            border: 1px solid #2d3748;
-            transition: all 0.3s ease;
-        }
-        .link-item:hover {
-            border-color: #00f0ff;
-            background: rgba(30, 58, 138, 0.4);
-            transform: translateX(5px);
-            box-shadow: -5px 0 15px rgba(0, 240, 255, 0.2);
-        }
-
-        /* Ping kỹ thuật số */
-        .ping-box {
-            font-family: 'Share Tech Mono', monospace;
-            background: #000;
-            color: #00f0ff;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 16px;
-            min-width: 70px;
-            text-align: center;
-            border: 1px solid rgba(0, 240, 255, 0.5);
-            box-shadow: inset 0 0 5px rgba(0, 240, 255, 0.3);
-            text-shadow: 0 0 5px rgba(0, 240, 255, 0.8);
-        }
-
-        .arrow { margin: 0 15px; color: #4a5568; font-size: 16px; }
-        .link-name { flex-grow: 1; font-size: 15px; color: #e2e8f0; }
-
-        /* Nút Truy cập */
-        .btn-access {
-            background: transparent;
-            color: #00f0ff;
-            padding: 6px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            border: 1px solid #00f0ff;
-            transition: all 0.3s;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-        .btn-access:hover {
-            background: rgba(0, 240, 255, 0.2);
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
-            color: #fff;
-        }
-
-        /* Nút Tải Lại */
-        .refresh-wrapper { text-align: center; margin-top: 30px; }
-        .btn-refresh {
-            background: linear-gradient(180deg, #4a5568, #2d3748);
-            color: #e2e8f0;
-            border: 1px solid #718096;
-            padding: 10px 40px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
-            cursor: pointer;
-            transition: 0.3s;
-            text-transform: uppercase;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-        .btn-refresh:hover { background: #718096; color: #fff; border-color: #00f0ff; box-shadow: 0 0 10px rgba(0,240,255,0.3); }
-
-        /* === KHU VỰC TẢI APP === */
-        .app-content { margin-top: 25px; }
-        .app-img { max-width: 95%; margin-bottom: 20px; border-radius: 10px; animation: float 4s ease-in-out infinite; }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .btn-download {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: linear-gradient(90deg, rgba(0,128,255,0.8), rgba(0,240,255,0.8));
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 4px;
-            font-size: 15px;
-            font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
-            border: 1px solid #00f0ff;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-            box-shadow: 0 0 15px rgba(0, 128, 255, 0.4);
-            text-decoration: none;
-        }
-        .btn-download:hover {
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
-            transform: translateY(-2px);
-            color: #fff;
-        }
-        .btn-download i { font-size: 20px; }
-
-        /* Mobile Responsive */
-        @media (max-width: 992px) {
-            .side-panel { display: none; } /* Ẩn 2 cột trang trí trên màn hình nhỏ để tránh rối mắt */
-        }
-        @media (max-width: 768px) {
-            #app { padding: 15px; border-width: 1px; }
-            .header { flex-direction: column; gap: 15px; border-bottom: none; }
-            .header .logo { font-size: 45px; }
-            .link-item { flex-wrap: wrap; justify-content: center; text-align: center; }
-            .arrow { display: none; }
-            .link-name { width: 100%; margin: 10px 0; }
-            .panel-title { font-size: 13px; padding: 4px 20px; }
-        }
-    </style>
+		.link-download-app {
+			padding: 0px;
+			position: relative;
+			overflow: hidden;
+			margin-top: 20px;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="app">
-        <header class="header">
-            <h1 class="logo">EX88</h1>
-            <a :href="kefuUrl" target="_blank" class="btn-support">
-                <i class="fas fa-satellite-dish"></i> DỊCH VỤ HỖ TRỢ
-            </a>
-        </header>
+	<div id="app">
+		<div id="header">
+			<div class="hBox clearfix">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/index/logo.png" alt="">
+					</a>
+				</div>
+				<div class="hIm02">
+					<a :href="kefuUrl" target="_blank">
+						<img src="images/index/h_img02.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="sjbdmap">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="/images/banner/bian.png" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/hoivien.png" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/daitiec.png" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/TT88TROLAI.jpg" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/diemdanh.jpg" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/TT88 Cược.jpg" style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="/images/banner/app.jpg" style="width: 100%">
+					</div>
+				</div>
+			</div>
+		</div>
+				<div id="container">
+			<div id="main">
+				<div class="wrap clearfix">
+					<div id="conts">
+						<h2><img src="images/index/ttl01.png" alt=""></h2>
+						<ul class="linkUl">
+							<li class="li02" v-for="(item,index) in urls" :key="index">
+								<span class="txt">{{item.second}}</span>
+								<img src="images/index/icon.png" alt="">
+								<span class="web">{{item.title}}</span>
+								<a :href="item.url" target="_blank">Truy cập</a>
+							</li>
+						</ul>
+						<div class="refresh pcbdmap">
+							<a @click="refresh">TẢI LẠI</a>
+						</div>
+					</div>
+					<div id="sideBar">
+						<h2><img src="images/index/ttl02.png" alt=""></h2>
+						<div class="inner clearfix">
+							<div class="img-download-app">
+								<img src="images/index/dla.png" alt="">
+							</div>
 
-        <main class="main-container">
-            
-            <aside class="side-panel">
-                <h3 class="side-title">HỆ SINH THÁI<br>GAME ĐỈNH CAO</h3>
-                <div class="side-item">
-                    <i class="fas fa-cube"></i>
-                    <span>Vật Phẩm Độc Quyền</span>
-                </div>
-                <div class="side-item">
-                    <i class="fab fa-galactic-republic"></i>
-                    <span>Cổ Vật Năng Lượng</span>
-                </div>
-                <div class="side-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Hiệu Ứng Đặc Biệt</span>
-                </div>
-            </aside>
+							<div class="link-download-app">
+								<div class="content">
+									<a @click="down" target="_blank">
+	<!--									<h3>TRUY CẬP LINK TẢI APP TỐC ĐỘ CAO</h3>-->
+										<img src="images/index/down_btn.png" style="width: 100%">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="container2">
+			<div id="main">
+				<div class="wrap clearfix">
+					<div id="conts">
+						<h2><img src="images/index/ttl01.png" alt=""></h2>
+						<ul class="linkUl">
+							<li class="li02" v-for="(item,index) in moburls" :key="index">
+								<span class="txt">{{item.second}}</span>
+								<img src="images/index/icon.png" alt="">
+								<span class="web">{{item.title}}</span>
+								<a :href="item.url" target="_blank">Truy cập</a>
+							</li>
+						</ul>
+						<div class="socials">
+							
+							<a href="https://telega.one/+UAKCO5tJksw2ZTJl" target="_blank"><img
+									src="images/index/Telegram(1).png" alt="telegram"></a>
+							<a href="http://fc.tt88aa.club/Account/Login" target="_blank"><img
+									src="images/index/ĐLY(1).png" alt="dndl"></a>
+						</div>
+						<div class="refresh pcbdmap">
+							<a @click="refresh">TẢI LẠI</a>
+						</div>
+						<div class="link-download-app">
+							<div class="content">
+								<a href="https://ttffhah-88jshdhsjdjkk.club/DownloadApp/" target="_blank">
+									<!--<h3>TRUY CẬP LINK TẢI APP TỐC ĐỘ CAO</h3>-->
+									<img src="images/index/down_btn.png" style="width: 100%">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="fBox">
+				<div class="fImg">
+				</div>
+				<p>Copyright © TT88 Reserved</p>
+			</div>
+		</div>
+	</div>
 
-            <section class="center-panel links-panel">
-                <div class="panel-title">LINK TRUY CẬP TỐC ĐỘ CAO</div>
-                <ul class="link-list">
-                    <li class="link-item" v-for="(item, index) in urls" :key="index">
-                        <div class="ping-box txt">{{item.second}}</div>
-                        <div class="arrow"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></div>
-                        <div class="link-name">{{item.title}}</div>
-                        <a :href="item.url" target="_blank" class="btn-access">Truy cập</a>
-                    </li>
-                </ul>
-                <div class="refresh-wrapper">
-                    <button @click="refresh" class="btn-refresh">TẢI LẠI HỆ THỐNG</button>
-                </div>
-            </section>
+	<script src="js/link.js"></script>
+	<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			timeHanlde: null,
+			tim: 0,
+			urls: [],
+			moburls: [],
+			waitingText: "đang kiểm duyệt ",
+			connectTimeout: "hết hạn",
+			connectFail: '9ms',
+			name: 'nohu90.com',
+			kefuUrl: "https://4uvjzj9.7eath8nn.com/chatwindow.aspx?siteId=65002667&planId=8148b053-409f-4953-8044-4bf6b79c3d0f",
+			apkAppUrl: 'https://ttffhah-88jshdhsjdjkk.club/DownloadApp/',
+			pcUrl: 'https://ttffhah-88jshdhsjdjkk.club/DownloadApp/',
+		},
 
-            <section class="center-panel app-panel">
-                <div class="panel-title">TẢI APP NGAY</div>
-                <div class="app-content">
-                    <img src="images/index/dla.png" alt="App UY88 Sci-fi" class="app-img">
-                    
-                    <a @click="down" target="_blank" class="btn-download">
-                        <i class="fab fa-android"></i> TẢI APP CHO DI ĐỘNG <i class="fab fa-apple"></i>
-                    </a>
-                </div>
-            </section>
+		created() {
+			this.generateRandomLinks();
+		},
 
-            <aside class="side-panel">
-                <h3 class="side-title">NỀN TẢNG UY TÍN<br>HÀNG ĐẦU</h3>
-                <div class="side-item">
-                    <i class="fas fa-dice-d20"></i>
-                    <span>Xúc Xắc Đa Diện</span>
-                </div>
-                <div class="side-item">
-                    <i class="fas fa-box-open"></i>
-                    <span>Rương Báu Kỹ Thuật Số</span>
-                </div>
-                <div class="side-item">
-                    <i class="fas fa-trophy"></i>
-                    <span>Hiệu Ứng Chiến Thắng</span>
-                </div>
-            </aside>
+		mounted() {
+			this.timeHanlde = setInterval(() => {
+				this.tim++
+			}, 100)
 
-        </main>
-    </div>
+			for (let i = 0; i < this.urls.length; i++) {
+				this.send(this.urls[i].url, i)
+			}
 
-    <script src="js/link.js"></script>
+			for (let j = 0; j < this.moburls.length; j++) {
+				this.send(this.moburls[j].url, j)
+			}
 
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                timeHanlde: null,
-                tim: 0,
-                urls: [],
-                waitingText: "Scan..",
-                connectTimeout: "Timeout",
-                connectFail: '9ms',
-                kefuUrl: "https://pw2ifg.jgxmalml.com/chatwindow.aspx?siteId=65003208&planId=13ac6842-2edf-476f-8448-a5764f901aef",
-                apkAppUrl: 'https://83uy88.com/AppDownload',
-                pcUrl: 'https://83uy88.com/AppDownload',
-            },
+			setTimeout(() => {
+				this.sortList();
+			}, 1000)
+		},
 
-            created() {
-                if (typeof allDomains === 'undefined') {
-                    window.allDomains = ["https://uy88.com", "https://uy88.net", "https://uy88.org", "https://uy88.info", "https://uy88.co"];
-                }
-                this.generateRandomLinks();
-            },
+		methods: {
+			generateRandomLinks() {
+				let shuffled = [...allDomains].sort(() => 0.5 - Math.random());
 
-            mounted() {
-                this.timeHanlde = setInterval(() => { this.tim++ }, 100)
-                for (let i = 0; i < this.urls.length; i++) {
-                    this.send(this.urls[i].url, i)
-                }
-                setTimeout(() => { this.sortList(); }, 1000)
-            },
+				let selectedDomains = shuffled.slice(0, 5);
 
-            methods: {
-                generateRandomLinks() {
-                    let shuffled = [...allDomains].sort(() => 0.5 - Math.random());
-                    let selectedDomains = shuffled.slice(0, 5);
-                    this.urls = selectedDomains.map((domain, index) => ({
-                        url: domain,
-                        title: "Link truy cập bảo mật " + (index + 1),
-                        second: this.waitingText,
-                        time: 0
-                    }));
-                },
+				this.urls = selectedDomains.map((domain, index) => ({
+					url: domain,
+					title: "Link truy cập " + (index + 1),
+					second: this.waitingText,
+					time: 0
+				}));
 
-                refresh() {
-                    this.tim = 0;
-                    clearInterval(this.timeHanlde);
-                    this.generateRandomLinks();
-                    this.timeHanlde = setInterval(() => { this.tim++ }, 100);
-                    for (let i = 0; i < this.urls.length; i++) {
-                        this.send(this.urls[i].url, i)
-                    }
-                    setTimeout(() => { this.sortList(); }, 1000)
-                },
+				this.moburls = selectedDomains.map((domain, index) => ({
+					url: domain,
+					title: "Link truy cập " + (index + 1),
+					second: this.waitingText,
+					time: 0
+				}));
+			},
 
-                sortOrder(field, type = 'asc') {
-                    return (a, b) => {
-                        if (type === 'asc') return a[field] > b[field] ? 1 : -1;
-                        return a[field] > b[field] ? -1 : 1;
-                    }
-                },
+			refresh() {
+				this.tim = 0;
+				clearInterval(this.timeHanlde);
 
-                sortList() {
-                    this.urls.sort(this.sortOrder('time', 'asc'))
-                },
+				// random lại 5 link mới khi bấm tải lại
+				this.generateRandomLinks();
 
-                send(url, index) {
-                    const _this = this
-                    $.ajax({
-                        type: 'get',
-                        url: url,
-                        dataType: 'jsonp',
-                        timeout: 1000,
-                        complete: function (res) {
-                            if (res.status == 200) {
-                                if (_this.tim > 5000) {
-                                    _this.urls[index].second = _this.connectTimeout;
-                                } else {
-                                    _this.urls[index].second = _this.tim + 'ms';
-                                }
-                                _this.urls[index].time = _this.tim;
-                            } else {
-                                _this.urls[index].second = _this.connectFail;
-                                _this.urls[index].time = 999999;
-                            }
-                        },
-                    })
-                },
+				this.timeHanlde = setInterval(() => {
+					this.tim++
+				}, 100)
 
-                down() {
-                    if (this.browserDetection() == 'PC') {
-                        window.location.href = this.pcUrl;
-                    } else {
-                        window.location.href = this.apkAppUrl;
-                    }
-                },
+				for (let i = 0; i < this.urls.length; i++) {
+					this.send(this.urls[i].url, i)
+				}
 
-                browserDetection() {
-                    var userAgent = window.navigator.userAgent.toLowerCase();
-                    if (userAgent.match(/ipad/i) || userAgent.match(/iphone os/i)) return 'iphone';
-                    if (userAgent.match(/android/i)) return 'android';
-                    return 'PC';
-                }
-            }
-        })
+				for (let j = 0; j < this.moburls.length; j++) {
+					this.send(this.moburls[j].url, j)
+				}
 
-        // Ping animation phong cách scan Radar
-        document.addEventListener("DOMContentLoaded", function () {
-            function updateRandomPing() {
-                const txtElements = document.querySelectorAll(".txt");
-                txtElements.forEach(element => {
-                    if(element.textContent.includes('ms') || element.textContent.trim() !== 'Scan..') {
-                        const randomPing = Math.floor(Math.random() * 12 + 1) + "ms";
-                        element.textContent = randomPing;
-                    }
-                });
-            }
-            setTimeout(() => { setInterval(updateRandomPing, 800); }, 1500); 
-        });
-    </script>
+				setTimeout(() => {
+					this.sortList();
+				}, 1000)
+			},
+
+			sortOrder(field, type = 'asc') {
+				return (a, b) => {
+					if (type === 'asc') return a[field] > b[field] ? 1 : -1;
+					return a[field] > b[field] ? -1 : 1;
+				}
+			},
+
+			sortList() {
+				this.urls.sort(this.sortOrder('time', 'asc'))
+				this.moburls.sort(this.sortOrder('time', 'asc'))
+			},
+
+			send(url, index) {
+				const _this = this
+
+				$.ajax({
+					type: 'get',
+					url: url,
+					dataType: 'jsonp',
+					timeout: 1000,
+					complete: function (res) {
+						console.log(res);
+
+						if (res.status == 200) {
+							if (_this.tim > 5000) {
+								_this.urls[index].second = _this.connectTimeout;
+								_this.moburls[index].second = _this.connectTimeout;
+							} else {
+								_this.urls[index].second = _this.tim + 'ms';
+								_this.moburls[index].second = _this.tim + 'ms';
+							}
+
+							_this.urls[index].time = _this.tim;
+							_this.moburls[index].time = _this.tim;
+						} else {
+							_this.urls[index].second = _this.connectFail;
+							_this.urls[index].time = 999999;
+							_this.moburls[index].second = _this.connectFail;
+							_this.moburls[index].time = 999999;
+						}
+					},
+				})
+			},
+
+			down() {
+				if (this.browserDetection() == 'PC') {
+					window.location.href = this.pcUrl;
+				} else {
+					if (this.browserDetection() == 'iphone' || this.browserDetection() == 'ipad') {
+						window.location.href = this.ios_step_1
+						setTimeout(() => {
+							window.location.href = this.ios_step_2
+						}, 2000)
+					} else {
+						window.location.href = this.apkAppUrl;
+					}
+				}
+			},
+
+			browserDetection() {
+				var userAgent = window.navigator.userAgent.toLowerCase();
+				var browser = null;
+
+				if (userAgent.match(/ipad/i)) {
+					browser = 'ipad';
+				} else if (userAgent.match(/iphone os/i)) {
+					browser = 'iphone';
+				} else if (userAgent.match(/midp/i)) {
+					browser = 'midp'
+				} else if (userAgent.match(/rv:1.2.3.4/i)) {
+					browser = 'rv:1.2.3.4';
+				} else if (userAgent.match(/ucweb/i)) {
+					browser = 'ucweb';
+				} else if (userAgent.match(/android/i)) {
+					browser = 'android';
+				} else if (userAgent.match(/windows ce/i)) {
+					browser = 'windowsCe';
+				} else if (userAgent.match(/windows mobile/i)) {
+					browser = 'windowsMobile';
+				} else {
+					browser = 'PC'
+				}
+
+				return browser;
+			}
+		}
+	})
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const txtElements = document.querySelectorAll(".txt");
+
+		function updateRandomPing() {
+			txtElements.forEach(element => {
+				const randomPing = Math.floor(Math.random() * 10 + 1) + "ms";
+				element.textContent = randomPing;
+			});
+		}
+
+		updateRandomPing();
+
+		setTimeout(() => {
+			setInterval(updateRandomPing, 1000);
+		}, 1000);
+	});
+</script>
+
 </body>
+
 </html>
