@@ -23,8 +23,6 @@ html,
 body {
 	height: 100vh;
 	margin: 0;
-	width: 100%;
-	overflow-x: hidden;
 }
 
 #app {
@@ -59,7 +57,6 @@ ul li {
 	display: none;
 }
 
-/* PC & Tablet */
 @media (min-width: 768px) {
 	.pcbdmap {
 		display: block !important;
@@ -75,17 +72,6 @@ ul li {
 
 	#containerlow {
 		display: none !important;
-	}
-}
-
-/* Mobile */
-@media (max-width: 767.98px) {
-	.sjbdmap {
-		display: block !important;
-	}
-	
-	#container2 {
-		display: block !important;
 	}
 }
 
@@ -114,7 +100,7 @@ ul li {
 }
 
 #header .hInner h1 span {
-	color: #ff4d4d;
+	color: #ff3333;
 	font-weight: bold;
 }
 
@@ -125,7 +111,7 @@ ul li {
 #header .hInner li {
 	margin-left: 10px;
 	float: left;
-	color: #666;
+	color: #4D4D4D;
 	font-size: 14px;
 }
 
@@ -140,7 +126,7 @@ ul li {
 }
 
 #header .hInner li a:hover {
-	color: #ffcccc;
+	color: #ff9999;
 }
 
 #header .hBox {
@@ -154,14 +140,14 @@ ul li {
 #header .logo img {
 	display: block;
 	width: 210px;
-	padding:15px;
+	padding: 10px;
 }
 
 #header .hIm01 {
 	margin: 6px 0 0;
 	float: left;
 	position: relative;
-	color: #ff9999;
+	color: #ffff96;
 	font-size: 24px;
 	line-height: 28px;
 	text-align: center;
@@ -205,7 +191,7 @@ ul li {
 	position: absolute;
 	right: -31px;
 	top: 49px;
-	border-right: 1px dotted #ff4d4d;
+	border-right: 1px dotted #ff0000;
 	content: "";
 }
 
@@ -237,7 +223,7 @@ ul li {
 	color: #fff;
 	font-size: 13px;
 	background-color: #2C2C2C;
-	border: 1px solid #ff3333;
+	border: 1px solid #3C3C3C;
 	text-align: center;
 }
 
@@ -256,17 +242,15 @@ ul li {
 	width: 123px;
 	display: block;
 	float: right;
-	color: #fff;
+	color: #000;
 	font-size: 16px;
 	line-height: 38px;
 	text-align: center;
-	background: linear-gradient(to bottom, #ff4d4d, #ff0000);
-	border-radius: 4px;
+	background: url(../images/index/bg02.png) no-repeat;
 }
 
 #conts .linkUl li a:hover {
-	color: #fff;
-	background: linear-gradient(to bottom, #ff6666, #cc0000);
+	color: #ff9999;
 }
 
 #main #conts .refresh {
@@ -275,7 +259,7 @@ ul li {
 }
 
 #main #conts .refresh a {
-	color: #fff;
+	color: #000000;
 	font-size: 17px;
 	line-height: 38px;
 	text-align: center;
@@ -286,18 +270,18 @@ ul li {
 }
 
 #main #conts .refresh a:hover {
-	color: #fff;
-	background: linear-gradient(to right, #ff6666 0%, #cc0000 100%);
+	color: #ff9999;
+	background: linear-gradient(to right, #ff3333 0%, #cc0000 100%);
 	cursor: pointer;
 }
 
 #main #conts .line {
 	margin: 17px -4px 30px 0;
-	border-bottom: 1px dotted #ff4d4d;
+	border-bottom: 1px dotted #016a21;
 }
 
 #main #conts .btm {
-	color: #ff8080;
+	color: #b97048;
 	font-size: 14px;
 	text-align: center;
 }
@@ -308,12 +292,13 @@ ul li {
 	align-items: center;
     margin-top: 10px;
 }
-
 .socials img {
 	width: 150px;
 	height: 40px;
 	margin-right: 5px;
 }
+
+
 
 #main #sideBar {
 	padding-top: 55px;
@@ -348,7 +333,7 @@ ul li {
 
 #main #sideBar .inner .rBox .ma {
 	margin-bottom: 10px;
-	color: #ffd6d6;
+	color: #f5fcff;
 	font-size: 16px;
 	text-align: center;
 }
@@ -357,14 +342,13 @@ ul li {
 	margin: 0 auto;
 	width: 142px;
 	display: block;
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 41px;
 	text-align: center;
-	background: linear-gradient(to bottom, #ff4d4d, #ff0000);
+	background: url(../images/index/bg03.png) no-repeat;
 	background-size: cover;
-	border-radius: 5px;
 }
 
 #main #sideBar .img {
@@ -387,7 +371,7 @@ ul li {
     text-align: center;
     clear: both;
     background-color: #171717;
-    border-top: 1px solid #ff0000;
+    border-top: 1px solid #1b191a;
     bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
@@ -395,6 +379,7 @@ ul li {
     justify-content: center;
     align-items: baseline;
 }
+
 
 #footer .fImg {
 	margin-bottom: 0px;
@@ -404,8 +389,8 @@ ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid #ff3333;
-	background-color: rgba(255, 0, 0, 0.15);
+	border: 2px solid #016a21;
+	background-color: #03682657;
 }
 
 #footer .fBox {
@@ -418,16 +403,16 @@ ul li {
 }
 
 #footer .fNavi li a {
-	color: #ff8080;
+	color: #ff6666;
 }
 
 #footer .fNavi li a:hover {
-	color: #ffd6d6;
+	color: #ff9999;
 }
 
 #footer p {
 	margin-top: 7px;
-	color: #b3b3b3;
+	color: #787878;
 	font-size: 12px;
 	line-height: 2.2;
 }
@@ -457,7 +442,7 @@ ul li {
 }
 
 .link-download-app h3 {
-	color: #ff4d4d;
+	color: #ff0000;
 	font-size: 16px;
 	white-space: nowrap;
 }
@@ -466,292 +451,205 @@ ul li {
 	text-shadow: 0 0 2px #ff9999;
 }
 
-/* ========== RESPONSIVE CHO MOBILE (THÊM MỚI) ========== */
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
 
-/* Tablet (768px - 1024px) */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    #main {
-        width: 95% !important;
-        margin: 0 auto 10px !important;
-    }
-    
-    #header .hBox {
-        width: 95% !important;
-        margin: 0 auto !important;
-    }
-    
-    .img-download-app img {
-        width: 70% !important;
-    }
+	to {
+		background-position: 0 450px;
+	}
 }
 
-/* Mobile (dưới 768px) */
+.box-btn-redirect {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+	#main,
+	#header .hBox,
+	#header .hInner,
+	#footer .fBox {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1023.98px) {
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+
+	#container,
+	#container2,
+	#containerlow {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	
+	#main #sideBar h2,
+	.img-download-app {
+		display: none;
+	}
+
+	#main #conts {
+		width: 100%;
+	}
+
+	#main #conts:before {
+		border: none;
+	}
+
+	#header .logo img {
+		width: 250px;
+	
+	}
+
+	#conts .linkUl li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+
+	#main #sideBar {
+		width: 100%;
+		padding: 0 0 20px;
+	}
+
+	.link-download-app {
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.link-download-app::before {
+		height: 1125%;
+	}
+
+	#header .hInner h1 {
+		font-size: 20px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	#conts .linkUl li span {
+		padding: 7px;
+		font-size: 24px;
+		width: 50%;
+	}
+
+	#conts .linkUl li a {
+		height: 50px;
+		background-size: cover;
+		font-size: 22px;
+	}
+
+	#conts .linkUl li .txt,
+	#conts .linkUl li a {
+		width: 20%;
+	}
+
+	#footer p {
+		font-size: 20px;
+	}
+
+	.link-download-app .content {
+		padding: 20px;
+	}
+
+	.link-download-app h3 {
+		font-size: 20px;
+	}
+}
+
 @media screen and (max-width: 767.98px) {
-    
-    /* Reset container */
-    #app,
-    #container,
-    #container2,
-    #main,
-    #header,
-    #footer {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-    
-    /* Fix header */
-    #header {
-        padding: 10px !important;
-        margin-bottom: 5px !important;
-    }
-    
-    #header .hBox {
-        width: 100% !important;
-        padding: 0 10px !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-    }
-    
-    #header .logo {
-        width: 45% !important;
-    }
-    
-    #header .logo img {
-        width: 100% !important;
-        max-width: 180px !important;
-        padding: 5px !important;
-    }
-    
-    #header .hIm02 {
-        width: 45% !important;
-    }
-    
-    #header .hIm02 a {
-        width: 100% !important;
-        background-color: transparent !important;
-    }
-    
-    #header .hIm02 img {
-        width: 100% !important;
-        max-width: 140px !important;
-        height: auto !important;
-    }
-    
-    /* Fix banner carousel */
-    .sjbdmap {
-        display: block !important;
-        width: 100% !important;
-        overflow: hidden !important;
-        margin-bottom: 5px !important;
-    }
-    
-    .sjbdmap .carousel,
-    .sjbdmap .carousel-inner,
-    .sjbdmap .carousel-item {
-        width: 100% !important;
-    }
-    
-    .sjbdmap img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-    }
-    
-    /* Fix main content */
-    #main {
-        width: calc(100% - 20px) !important;
-        margin: 0 10px 10px 10px !important;
-        padding: 20px 12px 20px 12px !important;
-        border-radius: 12px !important;
-    }
-    
-    /* Fix conts */
-    #main #conts {
-        width: 100% !important;
-        float: none !important;
-        padding-top: 30px !important;
-    }
-    
-    /* Xóa đường kẻ dọc bên phải */
-    #main #conts:before {
-        display: none !important;
-    }
-    
-    /* Fix title */
-    #main h2 {
-        position: relative !important;
-        top: -20px !important;
-        margin-bottom: 0 !important;
-    }
-    
-    #conts h2 img {
-        width: 80% !important;
-        max-width: 300px !important;
-        height: auto !important;
-    }
-    
-    /* Fix link list - chuyển thành dạng cột */
-    #conts .linkUl li {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #conts .linkUl li span,
-    #conts .linkUl li .txt,
-    #conts .linkUl li .web {
-        width: 90% !important;
-        float: none !important;
-        margin: 0 auto !important;
-        text-align: center !important;
-        font-size: 13px !important;
-        line-height: 1.4 !important;
-        padding: 8px !important;
-    }
-    
-    #conts .linkUl li .txt {
-        width: 60% !important;
-    }
-    
-    #conts .linkUl li img {
-        display: none !important;
-    }
-    
-    #conts .linkUl li a {
-        width: 60% !important;
-        float: none !important;
-        margin: 0 auto !important;
-        font-size: 14px !important;
-        line-height: 38px !important;
-        text-align: center !important;
-    }
-    
-    /* Fix sidebar */
-    #main #sideBar {
-        width: 100% !important;
-        float: none !important;
-        padding-top: 20px !important;
-    }
-    
-    #main #sideBar h2 img {
-        width: 80% !important;
-        max-width: 280px !important;
-        height: auto !important;
-    }
-    
-    /* Fix download app section */
-    .img-download-app {
-        text-align: center !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .img-download-app img {
-        width: 80% !important;
-        max-width: 280px !important;
-        height: auto !important;
-    }
-    
-    .link-download-app {
-        width: 100% !important;
-        margin-top: 15px !important;
-    }
-    
-    .link-download-app .content {
-        padding: 12px !important;
-    }
-    
-    .link-download-app img {
-        width: 80% !important;
-        max-width: 220px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
-    
-    .link-download-app h3 {
-        font-size: 14px !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-    }
-    
-    /* Fix social buttons */
-    .socials {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 10px !important;
-        margin-top: 15px !important;
-    }
-    
-    .socials a {
-        width: 80% !important;
-        margin: 0 auto !important;
-    }
-    
-    .socials img {
-        width: 100% !important;
-        max-width: 200px !important;
-        height: auto !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Fix refresh button */
-    .refresh {
-        margin: 15px auto !important;
-        text-align: center !important;
-    }
-    
-    .refresh a {
-        display: inline-block !important;
-        padding: 8px 20px !important;
-        font-size: 14px !important;
-    }
-    
-    /* Fix footer */
-    #footer {
-        padding: 10px !important;
-        position: relative !important;
-        bottom: auto !important;
-    }
-    
-    #footer .fBox {
-        padding: 10px !important;
-    }
-    
-    #footer p {
-        font-size: 11px !important;
-        line-height: 1.5 !important;
-    }
-}
+	#app {
+		height: fit-content !important;
+	}
+	.sjbdmap {
+		display: block !important;
+		margin-bottom: 5px;
+	}
 
-/* Màn hình cực nhỏ (dưới 480px) */
-@media screen and (max-width: 480px) {
-    #conts .linkUl li span,
-    #conts .linkUl li .txt,
-    #conts .linkUl li .web {
-        font-size: 12px !important;
-    }
-    
-    #conts .linkUl li a {
-        font-size: 13px !important;
-        width: 70% !important;
-    }
-    
-    .img-download-app img {
-        width: 90% !important;
-    }
-    
-    .link-download-app img {
-        width: 90% !important;
-    }
-    
-    .socials a {
-        width: 90% !important;
-    }
-    
-    #conts h2 img {
-        width: 95% !important;
-    }
+	#header .logo {
+		width: 45%;
+		height: 45%;
+	}
+
+	#header {
+		padding: 5px 0;
+	}
+
+	#header .hBox {
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	#header .logo img {
+		width: 130%;
+	}
+
+	#header .hIm02 a,
+	#header .hIm02 a img {
+		width: 80%;
+		border-radius: 35px;
+		background-color: transparent;
+		display: flex;
+        justify-content: flex-end;
+	}
+
+	#container2 {
+		padding-top: 3px;
+	}
+
+	#conts h2 img {
+		width: 345px;
+	}
+
+	#conts .linkUl li span,
+	#conts .linkUl li a {
+		font-size: 14px;
+		padding: 0;
+	}
+
+	#conts .linkUl li a {
+		height: 37px;
+	}
+
+	.link-download-app h3 {
+		font-size: 16px;
+	}
+
+	.link-download-app::before {
+		height: 700%;
+	}
+
+	.link-download-app .content {
+		padding: 10px;
+	}
+
+	#main #conts {
+		padding-top: 20px;
+	}
+
+	.box-btn-redirect {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto auto;
+	}
+
+	#footer {
+		bottom: 0;
+	}
+
+	#footer p {
+		font-size: 16px;
+	}
 }
